@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@sample/yarn-classic",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "start": "yarn workspace @sample/server start"
+  },
+  "license": "MIT",
+  "packageManager": "yarn@3.5.0"
+}
