@@ -1,0 +1,10 @@
+{
+  "buildpacks": [
+    {
+      "url": "https://github.com/lstoll/heroku-buildpack-monorepo.git"
+    },
+    {
+      "url": "https://github.com/tekihei2317/heroku-buildpack-nodejs.git#support-workspace-focusing"
+    }
+  ]
+}
