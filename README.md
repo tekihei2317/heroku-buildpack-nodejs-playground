@@ -1,11 +1,11 @@
 # heroku-buildpack-nodejs-playground
 
-## Deployment
+This sample is a monorepo of Next.js and Express.
 
-```bash
-APP_NAME=yarn-classic
-heroku create $APP_NAME
-heroku config:set APP_BASE=$APP_NAME
-heroku buildpacks:add https://github.com/lstoll/heroku-buildpack-monorepo.git -a $APP_NAME
-heroku buildpacks:add https://github.com/tekihei2317/heroku-buildpack-nodejs.git#support-workspace-focusing -a $APP_NAME
-```
+## Slug size
+
+- yarn-classic: 138.6MiB(node_modules for all workspaces)
+- yarn-berry-nodemodules-nonzero: 45.1MiB(node_modules for the server workspace)
+- yarn-berry-nodemodules-zero: 113.MiB(node_modules for a server workspace and yarn cache)
+
+If you use both zero install and node_modules(case 3), you may be able to reduce the slug size by deleting the yarn cache at the end.
